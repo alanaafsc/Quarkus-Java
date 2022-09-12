@@ -1,5 +1,9 @@
 # Quarkus
 ### Project used to make CRUD with Rest API, with any entity, using H2 memory database
+<aside>
+🔀 Quarkus is a stack made to run on kubernetes, built on top of several other technologies. It can run on both HotSpot and GraalVM, created from the best java libraries and java standards.
+
+</aside>
 
 # code-with-quarkus Project
 
