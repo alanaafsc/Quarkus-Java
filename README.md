@@ -1,5 +1,5 @@
 # Quarkus
-## Project used to make CRUD Rest API, with any entity, using H2 memory database
+### Project used to make CRUD with Rest API, with any entity, using H2 memory database
 
 # code-with-quarkus Project
 
