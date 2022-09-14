@@ -15,7 +15,7 @@ public class FrutasResourceTest {
           .when().get("/frutas")
           .then()
              .statusCode(200)
-             .body(is("[]"));
+             .body(is("[{\"id\":1,\"nome\":\"Laranja\",\"qtd\":5},{\"id\":2,\"nome\":\"Maca\",\"qtd\":3},{\"id\":3,\"nome\":\"Pera\",\"qtd\":1},{\"id\":4,\"nome\":\"Uva\",\"qtd\":6}]"));
     }
 
 }
