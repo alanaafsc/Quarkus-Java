@@ -1,8 +1,5 @@
 version: '3.5'
 
-volumes:
-  frutadatabase:
-
 services:
   quarkus-service:
     build:
@@ -14,6 +11,8 @@ services:
       - QUARKUS_DATASOURCE_URL=jdbc:postgresql://localhost:5432/frutasdb
     ports:
       - "8080:8080"
+    depends_on:
+      - quarkus-db
     networks:
       - quarkus
 
