@@ -10,7 +10,8 @@
 - Call our REST services → **Postman** (Client)
 - **Entity** was a class called Fruit, with two attributes → name and quantity
 
-CRUD
+
+## CRUD
 
 A sigla surgiu a partir das 4 operações básicas de um banco de dados, Insert, Select, Update e Delete.
 
@@ -24,19 +25,27 @@ U: Update – Atualizar um registro.
 
 D: Delete – Excluir um registro.
 
-API Rest
+
+
+
+## API Rest
 
 Uma interface de programação de aplicação (API) define as regras que você precisa seguir para se comunicar com outros sistemas de software. Os desenvolvedores expõem ou criam APIs para que outras aplicações possam se comunicar com suas aplicações programaticamente. A API RESTful é uma interface que dois sistemas de computador usam para trocar informações de forma segura pela internet. A maioria das aplicações de negócios precisa se comunicar com outras aplicações internas e de terceiros para executar várias tarefas.
 
-H2 Database
+
+
+## H2 Database
 
 H2 é um sistema de gerenciamento de banco de dados relacional escrito em Java. Ele pode ser incorporado em aplicativos Java ou executado no modo cliente-servidor. Portanto, H2 é um mecanismo de ***banco de dados*** SQL que está escrito em Java™ que implementa a API JDBC.
 
-Postman
+
+
+## Postman
 
 O **Postman** é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações HTTP e HTTPs simples e complexas, bem como ler suas respostas.
 
----
+
+
 
 ## ****Bootstrapping****
 
@@ -48,7 +57,6 @@ In the project, the Java 11 version and the Maven build tool were used. The Mave
 - Version: 1.0.0-SNAPSHOT
 - Java Version: 11
 
----
 
 ## Extensions
 
@@ -78,14 +86,14 @@ As seguintes modificações foram feitas:
 - Modificação do arquivo applications.properties, para utilizarmos o PostgreSQL
 - Adição de novas extensões
 
----
+
 
 ## New Extensions
 
 - `quarkus-jdbc-postgresql` → PostgreSQL JDBC Driver permite que programas Java se conectem a um banco de dados PostgreSQL usando código Java padrão independente de banco de dados.
 - Container Image Docker → Constrói imagens de container da aplicação usando Docker
 
----
+
 
 ## Building and Running
 
