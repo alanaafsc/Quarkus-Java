@@ -102,14 +102,30 @@ O Quarkus oferece uma escolha de 2 modos de execução. Você pode executar como
 ```java
 ./mvnw package -Pnative  -DskipTests
 ```
+Para construção da imagem: 
 
-Com a utilização do docker-compose, o comando acima é inicializado no próprio arquivo. Portanto, é utilizado: 
+```
+docker build -f src/main/docker/Dockerfile.native -t code-with-quarkus-3:native .
+```
 
+Antes de rodar o container da aplicação, roda-se o comando abaixo para iniciar um banco de dados no Docker:
+
+```java
+docker run --name postgres-product -e “POSTGRES_PASSWORD=postgres” -p 5432:5432 -v ~/developer/PostgreSQL:/var/lib/postgresql/data -d postgres
+```
+
+Com isso, pode-se rodar o comando para iniciar a aplicaçao:
+
+```java
+docker run -i --rm -p 8080:8080 -e QUARKUS_DATASOURCE_JDBC_URL=jdbc:postgresql://host.docker.internal:5432/postgres quarkus/code-with-quarkus-3
+```
+
+Com a utilização do docker-compose, os comandos acima são inicializados no próprio arquivo. O docker do banco de dados e a aplicação estão especificadas no file docker-compose.yml a fim de iniciar toda a aplicação no Docker. Portanto, é utilizado: 
 ```java
 docker-compose up -d
 ```
 
-Assim, tem-se o container do projeto rodando, com dois containers: da aplicação e do banco de dados, que se comunicam. 
+Assim, tem-se o container do projeto rodando, com dois containers: da aplicação e do banco de dados, que se comunicam. Para observar as requisições e a construcão da tabela no banco de dados, utilizou-se o pgAdmin e o Postico. Para as requisições, foi utilizado o Postman.
 
 ---
 
